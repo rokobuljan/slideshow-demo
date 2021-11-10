@@ -35,7 +35,6 @@ const Slideshow = (EL_slideshow, options = {}) => {
 
     // Methods
     const anim = () => {
-        console.log(curr);
         EL_mover.style.transform = `translateX(-${curr * 100}%)`;
         ELS_menuBtn.forEach((el, idx) => {
             el.classList.toggle("is-active", curr === idx);
