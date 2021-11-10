@@ -1,0 +1,82 @@
+/*QuickReset*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Slideshow {
+    --color-primary: #005a84;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* All Slideshow Buttons common styles */
+.Slideshow button {
+    cursor: pointer;
+    border-radius: 50%;
+    border-width: 0;
+}
+
+.Slideshow-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.Slideshow-mover {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Slideshow-item {
+    padding: 20px 60px;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.Slideshow-navBtn {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px; /* Half its own height */
+    background: var(--color-primary);
+    color: #fff;
+    line-height: 0;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.Slideshow-navBtn:hover {
+    opacity: 0.8;
+}
+
+.Slideshow-navBtn.prev {
+    left: 10px;
+    transform: rotate(0.5turn); /* Fix for non-centered icon bug "arrow_back_ios" in Google icons */
+}
+.Slideshow-navBtn.next {
+    right: 10px;
+}
+
+.Slideshow-menu {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu buttons created by JS */
+
+.Slideshow-menuBtn {
+    width: 26px;
+    height: 26px;
+    margin: 0 5px;
+}
+
+.Slideshow-menuBtn.is-active {
+    background: var(--color-primary);
+    color: #fff;
+}
